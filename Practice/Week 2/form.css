@@ -1,0 +1,15 @@
+:root {
+  --bg: white;
+  --text: black;
+  --font-size-base: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+[data-theme="dark"] {
+  --bg: #111;
+  --text: #eee;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-size: var(--font-size-base);
+}
