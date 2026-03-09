@@ -6,7 +6,7 @@ const customMap = (arr, callback) => {
   }
   return result;
 };
-console.log(customMap([1, 2, 3, 4, 5], (num) => num * 2));
+console.log(customMap([1, 2, 3, 8, 5], (num) => num * 2));
 
 // Custom Filter
 const customFilter = (arr, callback) => {
