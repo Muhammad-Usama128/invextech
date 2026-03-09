@@ -70,3 +70,4 @@ const grouped = employees.reduce((acc, item) => {
 }, {});
 
 console.log(grouped);
+// Hello World
