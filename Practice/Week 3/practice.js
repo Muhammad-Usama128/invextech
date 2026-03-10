@@ -1,4 +1,4 @@
-// Custom Map changed Once again
+// Custom Map chnged on branch feauture/custom-map
 const customMap = (arr, callback) => {
   let result = [];
   for (i = 0; i < arr.length; i++) {
