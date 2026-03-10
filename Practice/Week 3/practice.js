@@ -1,4 +1,4 @@
-// Custom Map changed once more
+// Custom Map changed Once again
 const customMap = (arr, callback) => {
   let result = [];
   for (i = 0; i < arr.length; i++) {
