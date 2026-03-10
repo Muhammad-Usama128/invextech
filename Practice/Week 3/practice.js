@@ -1,4 +1,4 @@
-// Custom Map chnged on branch feauture/custom-map
+// Custom Map chnged on the original array
 const customMap = (arr, callback) => {
   let result = [];
   for (i = 0; i < arr.length; i++) {
