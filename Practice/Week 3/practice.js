@@ -100,6 +100,7 @@ let object = {
   age: 20,
   address: ["okara", "Government Colony"],
 };
+
 let copied = deepCopy(object);
 copied.age = 25;
 console.log(object, copied);
@@ -111,6 +112,7 @@ const PromiseAll = (promises) => {
     let result = [];
     let count = 0;
     if (promises.length === 0) return Promise.resolve([]);
+
     promises.forEach((promise, index) => {
       Promise.resolve(promise)
         .then((val) => {
@@ -126,6 +128,7 @@ const PromiseAll = (promises) => {
     });
   });
 };
+
 const p1 = Promise.resolve(10);
 const p2 = new Promise((res) => setTimeout(() => res(20), 1000));
 const p3 = Promise.resolve(30);
