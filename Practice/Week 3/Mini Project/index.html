@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <div class="logo">Weather.</div>
+          <div class="location">
+            <svg
+              class="location-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+            >
+              <path
+                d="M8 0C5.2 0 3 2.2 3 5c0 3.5 5 11 5 11s5-7.5 5-11c0-2.8-2.2-5-5-5zm0 7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"
+                fill="currentColor"
+              />
+            </svg>
+            <span>Location</span>
+          </div>
+        </div>
+        <form class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search area here..."
+          />
+          <button class="search-btn">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path
+                d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </form>
+      </header>
+
+      <!-- Today's Weather Section -->
+      <section class="today-weather">
+        <div class="today-left">
+          <h2 class="section-title">Today's Weather Forecast</h2>
+          <div class="current-date">Wednesday, July 12, 10:03 AM</div>
+          <div class="main-temp">
+            <div class="temp-value">30<span class="temp-unit">°C</span></div>
+            <div class="feels-like">Feels 32°C</div>
+          </div>
+
+          <!-- Hourly Forecast -->
+          <div class="hourly-forecast">
+            <!-- <div class="hour-card">
+              <div class="hour-time">12 AM</div>
+              <div class="weather-icon">☁️</div>
+              <div class="hour-temp">23°C</div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Weekly Forecast Section -->
+      <section class="weekly-forecast">
+        <h2 class="section-title">Weekly Forecast</h2>
+        <div class="week-cards">
+          <div class="day-card active">
+            <div class="day-header">
+              <div class="day-name">Wed</div>
+              <div class="day-date">July 12</div>
+            </div>
+            <svg class="day-icon" width="48" height="48" viewBox="0 0 48 48">
+              <ellipse
+                cx="24"
+                cy="36"
+                rx="18"
+                ry="6"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <circle cx="24" cy="22" r="12" fill="#FFF" />
+              <path
+                d="M18 28l3-5 3 5M24 28l3-5 3 5"
+                stroke="#4A90E2"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M22 16l-5 10h10l-5 10"
+                fill="#FFD700"
+                stroke="#FFA500"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div class="day-temp">
+              32° <span class="temp-range">/ 27°</span>
+            </div>
+            <div class="day-condition">Thundershower</div>
+            <div class="day-wind">Wind: 18 km/h</div>
+            <div class="day-precip">Precipitation: 90%</div>
+            <div class="day-humidity">Humidity: 0%</div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <div class="day-name">Thu</div>
+              <div class="day-date">July 13</div>
+            </div>
+            <svg class="day-icon" width="48" height="48" viewBox="0 0 48 48">
+              <ellipse
+                cx="24"
+                cy="36"
+                rx="18"
+                ry="6"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <circle cx="24" cy="22" r="12" fill="#FFF" />
+              <path
+                d="M18 28l3-5 3 5M24 28l3-5 3 5"
+                stroke="#4A90E2"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M22 16l-5 10h10l-5 10"
+                fill="#FFD700"
+                stroke="#FFA500"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div class="day-temp">
+              32° <span class="temp-range">/ 27°</span>
+            </div>
+            <div class="day-condition">Thundershower</div>
+            <div class="day-wind">Wind: 18 km/h</div>
+            <div class="day-precip">Precipitation: 90%</div>
+            <div class="day-humidity">Humidity: 0%</div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <div class="day-name">Fri</div>
+              <div class="day-date">July 14</div>
+            </div>
+            <svg class="day-icon" width="48" height="48" viewBox="0 0 48 48">
+              <ellipse
+                cx="24"
+                cy="36"
+                rx="18"
+                ry="6"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <circle cx="24" cy="22" r="12" fill="#FFF" />
+              <path
+                d="M18 28l3-5 3 5M24 28l3-5 3 5"
+                stroke="#4A90E2"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M22 16l-5 10h10l-5 10"
+                fill="#FFD700"
+                stroke="#FFA500"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div class="day-temp">
+              31° <span class="temp-range">/ 26°</span>
+            </div>
+            <div class="day-condition">Thundershower</div>
+            <div class="day-wind">Wind: 14 km/h</div>
+            <div class="day-precip">Precipitation: 88%</div>
+            <div class="day-humidity">Humidity: 0%</div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <div class="day-name">Sat</div>
+              <div class="day-date">July 15</div>
+            </div>
+            <svg class="day-icon" width="48" height="48" viewBox="0 0 48 48">
+              <ellipse
+                cx="24"
+                cy="36"
+                rx="18"
+                ry="6"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <circle cx="24" cy="22" r="12" fill="#FFF" />
+              <path
+                d="M18 28l3-5 3 5M24 28l3-5 3 5"
+                stroke="#4A90E2"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M22 16l-5 10h10l-5 10"
+                fill="#FFD700"
+                stroke="#FFA500"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div class="day-temp">
+              30° <span class="temp-range">/ 26°</span>
+            </div>
+            <div class="day-condition">Thundershower</div>
+            <div class="day-wind">Wind: 14 km/h</div>
+            <div class="day-precip">Precipitation: 86%</div>
+            <div class="day-humidity">Humidity: 0%</div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <div class="day-name">Sun</div>
+              <div class="day-date">July 16</div>
+            </div>
+            <svg class="day-icon" width="48" height="48" viewBox="0 0 48 48">
+              <ellipse
+                cx="24"
+                cy="36"
+                rx="18"
+                ry="6"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <circle cx="24" cy="22" r="12" fill="#FFF" />
+              <path
+                d="M18 28l3-5 3 5M24 28l3-5 3 5"
+                stroke="#4A90E2"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M22 16l-5 10h10l-5 10"
+                fill="#FFD700"
+                stroke="#FFA500"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div class="day-temp">
+              31° <span class="temp-range">/ 26°</span>
+            </div>
+            <div class="day-condition">Thundershower</div>
+            <div class="day-wind">Wind: 14 km/h</div>
+            <div class="day-precip">Precipitation: 87%</div>
+            <div class="day-humidity">Humidity: 0%</div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <div class="day-name">Mon</div>
+              <div class="day-date">July 17</div>
+            </div>
+            <svg class="day-icon" width="48" height="48" viewBox="0 0 48 48">
+              <ellipse
+                cx="24"
+                cy="36"
+                rx="18"
+                ry="6"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <circle cx="24" cy="22" r="12" fill="#FFF" />
+              <path
+                d="M18 28l3-5 3 5M24 28l3-5 3 5"
+                stroke="#4A90E2"
+                stroke-width="2"
+                fill="none"
+              />
+            </svg>
+            <div class="day-temp">
+              32° <span class="temp-range">/ 27°</span>
+            </div>
+            <div class="day-condition">Scattered thunderstorms</div>
+            <div class="day-wind">Wind: 14 km/h</div>
+            <div class="day-precip">Precipitation: 90%</div>
+            <div class="day-humidity">Humidity: 74%</div>
+          </div>
+
+          <div class="day-card">
+            <div class="day-header">
+              <div class="day-name">Tue</div>
+              <div class="day-date">July 18</div>
+            </div>
+            <svg class="day-icon" width="48" height="48" viewBox="0 0 48 48">
+              <ellipse
+                cx="24"
+                cy="36"
+                rx="18"
+                ry="6"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <circle cx="24" cy="22" r="12" fill="#FFF" />
+              <path
+                d="M18 28l3-5 3 5M24 28l3-5 3 5"
+                stroke="#4A90E2"
+                stroke-width="2"
+                fill="none"
+              />
+              <path
+                d="M22 16l-5 10h10l-5 10"
+                fill="#FFD700"
+                stroke="#FFA500"
+                stroke-width="1.5"
+              />
+            </svg>
+            <div class="day-temp">
+              30° <span class="temp-range">/ 27°</span>
+            </div>
+            <div class="day-condition">Isolated thunderstorms</div>
+            <div class="day-wind">Wind: 14 km/h</div>
+            <div class="day-precip">Precipitation: 86%</div>
+            <div class="day-humidity">Humidity: 72%</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
