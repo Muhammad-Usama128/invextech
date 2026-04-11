@@ -1,0 +1,23 @@
+.singleBlog {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.singleBlog img {
+  width: 100%;
+}
+.singleBlog p {
+  text-align: justify;
+}
+.noBlogFound-h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 50px;
+  color: aqua;
+}
+.noBlogFound-h2 {
+  text-align: center;
+}

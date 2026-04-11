@@ -6,14 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="form.css" />
   </head>
-  <body data-theme="dark">
-    <div class="timer">
-      <p id="timer">00:00:00</p>
-      <button id="start">Start</button>
-      <button id="stop">Stop</button>
-      <button id="reset">Reset</button>
+  <body>
+    <div class="stopwatch">
+      <div class="time">00:00:00:00</div>
+      <button onclick="start()">Start</button>
+      <button onclick="stop()">Stop</button>
+      <button onclick="reset()">Reset</button>
     </div>
-
-    <script src="form.js"></script>
+    <!-- <input type="text" id="input" />
+    <div id="inputText"></div> -->
+    <script src="./form.js"></script>
   </body>
 </html>

@@ -1,35 +1,55 @@
+let time = document.querySelector(".time");
+let timer;
+let milliseconds = 0;
 let second = 0;
 let minute = 0;
 let hour = 0;
-let timerInterval = null;
-const showTimer = () => {
-  const timer = document.getElementById("timer");
-  timer.innerText = `${hour.toString().padStart(2, "0")}:${minute.toString().padStart(2, "0")}:${second.toString().padStart(2, "0")}`;
+let start = () => {
+  if (!timer) {
+    timer = setInterval(() => {
+      if (milliseconds === 100) {
+        second++;
+        milliseconds = 0;
+      } else {
+        milliseconds++;
+      }
+      if (second === 60) {
+        minute++;
+        second = 0;
+      }
+      if (minute === 60) {
+        hour++;
+        minute = 0;
+      }
+      time.innerText = `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}:${String(second).padStart(2, "0")}:${String(milliseconds).padStart(2, "0")}`;
+    }, 10);
+  }
 };
-document.getElementById("start").addEventListener("click", () => {
-  if (timerInterval) return;
-  timerInterval = setInterval(() => {
-    second++;
-    if (second === 60) {
-      second = 0;
-      minute++;
-    } else if (minute === 60) {
-      minute = 0;
-      hour++;
-    }
-    showTimer();
-  }, 1000);
-});
-document.getElementById("stop").addEventListener("click", () => {
-  clearInterval(timerInterval);
-  timerInterval = null;
-});
-document.getElementById("reset").addEventListener("click", () => {
-  clearInterval(timerInterval);
-  timerInterval = null;
+let stop = () => {
+  clearInterval(timer);
+  timer = null;
+};
+let reset = () => {
+  stop();
+  milliseconds = 0;
   second = 0;
   minute = 0;
   hour = 0;
-  showTimer();
-});
-showTimer();
+  time.innerText = `00:00:00:00`;
+};
+
+// let debounce = (fn, delay) => {
+//   let timer;
+//   return function (...arg) {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       fn.apply(this, arg);
+//     }, delay);
+//   };
+// };
+// document.querySelector("#input").addEventListener(
+//   "input",
+//   debounce((e) => {
+//     document.querySelector("#inputText").innerText = e.target.value;
+//   }, 500),
+// );

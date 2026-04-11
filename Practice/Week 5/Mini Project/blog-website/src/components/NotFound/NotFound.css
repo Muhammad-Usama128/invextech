@@ -1,0 +1,9 @@
+.notFound .noBlogFound-h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 50px;
+  color: aqua;
+}
+.notFound .noBlogFound-h2 {
+  text-align: center;
+}

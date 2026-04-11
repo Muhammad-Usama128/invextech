@@ -1,0 +1,14 @@
+.blogsPage h1,
+.blogsPage > h2 {
+  text-align: center;
+}
+.blogsPage h1 {
+  color: aqua;
+  font-size: 3rem;
+}
+.blogs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
