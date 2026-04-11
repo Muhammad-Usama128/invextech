@@ -7,18 +7,18 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (email && message) {
-      setLoading(true);
-      const response = await fetch("/api/contact");
-      const data = await response.json();
-      setTimeout(() => {
-        setResponse(data.message);
-        setLoading(false);
-      }, 1000);
-    }
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (email && message) {
+  //     setLoading(true);
+  //     const response = await fetch("/api/contact");
+  //     const data = await response.json();
+  //     setTimeout(() => {
+  //       setResponse(data.message);
+  //       setLoading(false);
+  //     }, 1000);
+  //   }
+  // };
   return (
     <>
       <div className="bg-[url('/contact-bg.png')] bg-cover bg-center w-full m-auto rounded-lg ">
