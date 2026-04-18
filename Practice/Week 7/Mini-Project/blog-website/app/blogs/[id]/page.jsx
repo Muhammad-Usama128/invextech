@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+export const metadata: Metadata = {
+  title: "Blog - Blog Website",
+};
 const page = async ({ params }) => {
   const { id } = await params;
   const response = await fetch(`https://dev.to/api/articles/${id}`, {

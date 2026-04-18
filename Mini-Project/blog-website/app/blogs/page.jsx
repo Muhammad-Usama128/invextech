@@ -2,6 +2,10 @@
 import BlogCard from "@/components/ui/BlogCard";
 import { useState, useEffect } from "react";
 
+export const metadata = {
+  title: "Blogs - Blog Website",
+};
+
 const page = () => {
   const [data, setData] = useState([]);
   const [loadBlog, setLoadBlog] = useState(1);

@@ -1,6 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+export const metadata: Metadata = {
+  title: "Contact Us - Blog Website",
+};
 
 const Contact = () => {
   const router = useRouter();
