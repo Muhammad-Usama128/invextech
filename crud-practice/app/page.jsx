@@ -5,13 +5,14 @@ export default async function Home() {
   let Error = null;
 
   try {
-    const response = await axios.get("https://fakestoreapi.com/products", {
-      headers: {
-        "Content-Type": "application/json",
-        "User-Agent": "Mozilla/5.0",
-      },
-    });
-    data = await response.data;
+    // const response = await axios.get("https://fakestoreapi.com/products", {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     "User-Agent": "Mozilla/5.0",
+    //   },
+    // });
+    // data = await response.data;
+    console.log("NONE");
   } catch (error) {
     console.error("Error fetching products:", error);
     Error = error;
