@@ -1,0 +1,53 @@
+@import "tailwindcss";
+body {
+  font-family: poppins, sans-serif;
+  background-color: white;
+  min-height: 100vh;
+}
+#carosal1::-webkit-scrollbar {
+  display: none;
+}
+#carousel {
+  scroll-behavior: smooth;
+  anchor-name: --carousel;
+  scroll-snap-type: x mandatory;
+}
+#carousel::-webkit-scrollbar {
+  display: none;
+}
+#carousel::scroll-button(right),
+#carousel::scroll-button(left) {
+  background-color: white;
+  color: orange;
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+  border-radius: 5px;
+  position: fixed;
+  position-anchor: --carousel;
+  z-index: 1;
+
+  &:hover {
+    background-color: orange;
+    color: white;
+  }
+}
+#carousel::scroll-button(right) {
+  content: ">";
+  position-area: right center;
+  translate: -50%;
+}
+#carousel::scroll-button(left) {
+  content: "<";
+  position-area: left center;
+  translate: 50%;
+}
+#carousel::scroll-button(left):disabled,
+#carousel::scroll-button(right):disabled {
+  cursor: default;
+  background-color: white !important;
+  color: orange !important;
+}

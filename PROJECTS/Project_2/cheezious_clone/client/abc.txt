@@ -1,0 +1,3 @@
+hey i am using redux toolkit i want you to use redux inside my project and add the product inside the store 
+store id,image(src),title, qty and amount  and also make it that if user already has the product in the cart the quantity increae by one 
+also make one more slice for liked product i have added like icon in my page so when user click on like it add only the id of product inside the array of redux and when user again click remove the product id from it also make check that if product with same id inside the store change only the src of Image tag from /Heart-Outline.png to /Heart-Filled.png don't change anything else
