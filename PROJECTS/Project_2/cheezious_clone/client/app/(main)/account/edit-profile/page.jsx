@@ -41,7 +41,7 @@ export default function EditProfilePage() {
     setIsUpdating(true);
     try {
       const response = await axios.patch(
-        `http://localhost:3001/user/${user._id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/user/${user._id}`,
         {
           name,
           dateOfBirth: dob,

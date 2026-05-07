@@ -2,7 +2,13 @@ import Link from "next/link";
 import MenuCard from "../components/ui/MenuCard";
 import Image from "next/image";
 import SubscribeForm from "../components/ui/SubscribeForm";
+import { useEffect } from "react";
 export default function Home() {
+  useEffect(() => {
+    if (process.env.NODE_ENV === "development") {
+      console.log("Process in development mode");
+    }
+  }, []);
   return (
     <>
       <Image

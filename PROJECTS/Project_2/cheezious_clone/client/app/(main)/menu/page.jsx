@@ -36,7 +36,9 @@ const MenuContent = () => {
   useEffect(() => {
     const fetchMenuData = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/discs");
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/discs`,
+        );
         setMenuData(response.data);
       } catch (error) {
         console.error("Error fetching menu data:", error);

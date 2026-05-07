@@ -32,7 +32,7 @@ const OtpContent = () => {
       setPhoneNumber(storedNumber);
       setIsLoaded(true);
       axios
-        .get(`http://localhost:3001/otp/%2B92${storedNumber}`)
+        .get(`${process.env.NEXT_PUBLIC_API_URL}/otp/%2B92${storedNumber}`)
         .then((res) => {
           if (res.data && res.data.otp) {
             setServerOtp(res.data.otp.toString());
@@ -66,7 +66,9 @@ const OtpContent = () => {
           if (enteredOtp === serverOtp) {
             handleSuccess("OTP Verified successfully");
             axios
-              .get(`http://localhost:3001/user/%2B92${phoneNumber}`)
+              .get(
+                `${process.env.NEXT_PUBLIC_API_URL}/user/%2B92${phoneNumber}`,
+              )
               .then((res) => {
                 localStorage.setItem("login", JSON.stringify(res.data));
                 setTimeout(() => {

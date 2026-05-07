@@ -40,10 +40,13 @@ const PersonalInformationPage = () => {
         number = "+92" + number;
       }
 
-      const response = await axios.post("http://localhost:3001/user", {
-        name,
-        number,
-      });
+      const response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/user`,
+        {
+          name,
+          number,
+        },
+      );
 
       if (response.status === 200) {
         const userData = response.data;

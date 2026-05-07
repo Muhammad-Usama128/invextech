@@ -20,7 +20,7 @@ export default function OrderHistoryPage() {
       const user = JSON.parse(loginData);
       try {
         const response = await axios.get(
-          `http://localhost:3001/order/${user._id}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/order/${user._id}`,
         );
         setOrders(response.data);
       } catch (err) {
@@ -73,7 +73,10 @@ export default function OrderHistoryPage() {
   return (
     <div className="w-full max-w-[550px] mx-auto mt-2">
       {orders.map((order) => (
-        <div key={order._id} className="bg-[#f9f9f9] rounded-xl p-5 mb-5 shadow-sm border border-gray-100">
+        <div
+          key={order._id}
+          className="bg-[#f9f9f9] rounded-xl p-5 mb-5 shadow-sm border border-gray-100"
+        >
           <div className="flex items-center gap-2 mb-3">
             <h2 className="text-base font-bold text-black">
               Cheezious - Okara
@@ -96,7 +99,9 @@ export default function OrderHistoryPage() {
               <p className="text-[15px] font-bold text-black">
                 Rs. {order.price.toLocaleString()}
               </p>
-              <p className="text-[#f55928] font-bold text-[14px]">45 min left</p>
+              <p className="text-[#f55928] font-bold text-[14px]">
+                45 min left
+              </p>
             </div>
           </div>
         </div>

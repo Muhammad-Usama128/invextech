@@ -51,7 +51,7 @@ export default function CartPage() {
           .join(", ");
 
         const response = await axios.post(
-          `http://localhost:3001/order/${userId}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/order/${userId}`,
           {
             dishes,
             price: cartTotal,

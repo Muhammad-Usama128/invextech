@@ -24,7 +24,9 @@ export default function FavoritesPage() {
   useEffect(() => {
     const fetchDiscs = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/discs");
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/discs`,
+        );
         setAllDiscs(response.data);
       } catch (err) {
         console.error("Failed to fetch discs", err);
