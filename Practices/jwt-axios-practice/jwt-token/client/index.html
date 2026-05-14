@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <div class="dashboard-card">
+        <div class="dashboard-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <div class="dashboard-header">
+          <h2>Welcome Back!</h2>
+          <p>You have successfully logged in to your dashboard.</p>
+        </div>
+        
+        <div class="dashboard-content">
+          <div class="info-box">
+            <span class="info-label">Status</span>
+            <span class="info-value success">Active Session</span>
+          </div>
+        </div>
+
+        <button id="logoutBtn" class="logout-btn">Log Out</button>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="script2.js"></script>
+</html>
